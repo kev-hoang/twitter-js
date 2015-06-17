@@ -15,7 +15,11 @@ var find = function (properties) {
   return _.where(data, properties);
 };
 
-module.exports = { add: add, list: list, find: find };
+var latestTweet = function(){
+	return data[data.length-1];
+}
+
+module.exports = { add: add, list: list, find: find, latestTweet: latestTweet };
 
 
 var randArrayEl = function(arr) {

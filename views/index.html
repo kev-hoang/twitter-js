@@ -28,7 +28,7 @@
     <div class="col-md-9">
     
       <!-- display tweets here -->
-      <ul>
+      <ul id="tweetList">
       {% for tweet in tweets %}
         <li class="tweet"><b><a href="/users/{{tweet.name}}">{{tweet.name}}</a></b><br><a href="/users/{{tweet.name}}/tweets/{{tweet.id}}">{{tweet.text}}</a><br><a href="">Re-Tweet</a></li><br>
       {% endfor %}
