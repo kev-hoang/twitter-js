@@ -1,9 +1,10 @@
 var _ = require('underscore');
 
 var data = [];
+var id = 0;
 
 var add = function (name, text) {
-  data.push({ name: name, text: text });
+  data.push({ name: name, text: text, id: id++, });
 };
 
 var list = function () {
@@ -36,5 +37,9 @@ for(var i=0; i<10; i++) {
   module.exports.add( getFakeName(), getFakeTweet() );
 }
 
+module.exports.add("Patrick", "HI");
+
+// console.log(data);
+// console.log(module.exports.find({name: "Patrick", id: 10}));
 //console.log(module.exports.list());
-console.log(module.exports.find({text: "Fullstack Academy is " + "amazing" + "! The instructors are just so " + "wonderful" + ". #fullstacklove #codedreams"}));
+//console.log(module.exports.find({text: "Fullstack Academy is " + "amazing" + "! The instructors are just so " + "wonderful" + ". #fullstacklove #codedreams"}));
